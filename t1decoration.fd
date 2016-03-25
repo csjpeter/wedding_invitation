@@ -1,0 +1,23 @@
+\ProvidesFile{t1decoration.fd}[DesignMotif font]
+
+\DeclareFontFamily{T1}{decoration}{}
+
+\DeclareFontShape{T1}{decoration}{m}{n}{<-> decoration}{}
+%\DeclareFontShape{T1}{decoration}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{decoration}{m}{it}{<->ssub * decoration/m/n}{}
+\DeclareFontShape{T1}{decoration}{m}{sl}{<->ssub * decoration/m/n}{}
+\DeclareFontShape{T1}{decoration}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{decoration}{b}{n}{<->ssub * decoration/m/n}{}
+\DeclareFontShape{T1}{decoration}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{decoration}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{decoration}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{decoration}{bx}{n}{<->ssub * decoration/m/n}{}
+\DeclareFontShape{T1}{decoration}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{decoration}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{decoration}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+decoration\space <decoration.ttf\space <T1-WGL4.enc}
+
+\endinput

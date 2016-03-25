@@ -1,0 +1,23 @@
+\ProvidesFile{t1dilyan.fd}[Knight font]
+
+\DeclareFontFamily{T1}{dilyan}{}
+
+\DeclareFontShape{T1}{dilyan}{m}{n}{<-> dilyan}{}
+%\DeclareFontShape{T1}{dilyan}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{dilyan}{m}{it}{<->ssub * dilyan/m/n}{}
+\DeclareFontShape{T1}{dilyan}{m}{sl}{<->ssub * ptm/m/sl}{}
+\DeclareFontShape{T1}{dilyan}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{dilyan}{b}{n}{<->ssub * dilyan/m/n}{}
+\DeclareFontShape{T1}{dilyan}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{dilyan}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{dilyan}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{dilyan}{bx}{n}{<->ssub * dilyan/m/n}{}
+\DeclareFontShape{T1}{dilyan}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{dilyan}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{dilyan}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+dilyan\space <dilyan.ttf\space <T1-WGL4.enc}
+
+\endinput

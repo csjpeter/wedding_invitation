@@ -1,0 +1,23 @@
+\ProvidesFile{t1ocorners.fd}[Mutlu font]
+
+\DeclareFontFamily{T1}{ocorners}{}
+
+\DeclareFontShape{T1}{ocorners}{m}{n}{<-> ocorners}{}
+%\DeclareFontShape{T1}{ocorners}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{ocorners}{m}{it}{<->ssub * ocorners/m/n}{}
+\DeclareFontShape{T1}{ocorners}{m}{sl}{<->ssub * ocorners/m/n}{}
+\DeclareFontShape{T1}{ocorners}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{ocorners}{b}{n}{<->ssub * ocorners/m/n}{}
+\DeclareFontShape{T1}{ocorners}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{ocorners}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{ocorners}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{ocorners}{bx}{n}{<->ssub * ocorners/m/n}{}
+\DeclareFontShape{T1}{ocorners}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{ocorners}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{ocorners}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+ocorners\space <ocorners.ttf\space <T1-WGL4.enc}
+
+\endinput

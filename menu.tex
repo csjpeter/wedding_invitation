@@ -1,0 +1,355 @@
+%
+\documentclass[10pt,twoside,final]{article}
+\usepackage[dvips=false,pdftex=false,vtex=false,truedimen,portrait]{geometry}
+\geometry{
+	paperwidth=320truemm,
+	paperheight=225truemm,
+	top=0truecm,
+	bottom=0truecm,
+	left=0truecm,
+	right=0truecm,
+	nohead
+}
+%
+%	font setting
+\usepackage[T1]{fontenc}
+\usepackage{ucs}
+\usepackage[utf8x,utf8]{inputenc}
+%\usepackage[utf8ttf]{inputenc}
+\usepackage{ttfucs}
+%
+%
+\usepackage[hungarian]{babel}	% division of words / elválasztások
+\selectlanguage{hungarian}	% language settings / nyelvi beállítások
+%
+%
+\usepackage{color}
+%
+%
+\usepackage{textcomp}
+\usepackage{wallpaper}
+\usepackage{rotating}
+\usepackage[absolute,showboxes]{textpos}
+%\usepackage[colorgrid,texcoord]{eso-pic}
+%
+%
+%
+\newcount{\paperWidth}\paperWidth\paperwidth%
+\divide\paperWidth186467%
+\newcount{\paperHeight}\paperHeight\paperheight%
+\divide\paperHeight186467%
+\newcount{\vertMargin}\vertMargin5%
+\newcount{\horizMargin}\horizMargin5%
+\newcount{\columnTextMargin}\columnTextMargin16%
+\newcount{\columnWidth}\columnWidth95%
+%
+\newcount{\columnTextWidth}\columnTextWidth\columnWidth%
+\advance\columnTextWidth-\columnTextMargin
+%
+\newcount{\usedPaperWidth}\usedPaperWidth\paperWidth%
+\advance\usedPaperWidth-\horizMargin
+\advance\usedPaperWidth-\horizMargin
+\newcount{\usedPaperHeight}\usedPaperHeight\paperHeight%
+\advance\usedPaperHeight-\vertMargin
+\advance\usedPaperHeight-\vertMargin
+%
+\newcount{\topMargin}\topMargin\vertMargin%
+\newcount{\bottomMargin}\bottomMargin\topMargin%
+\advance\bottomMargin\usedPaperHeight
+\newcount{\leftMargin}\leftMargin\horizMargin%
+\newcount{\rightMargin}\rightMargin\horizMargin%
+\advance\rightMargin\usedPaperWidth
+%
+%adjust the TPHorizModule and TPHorizModule units to the displayed mm %grid
+\TPGrid{\paperWidth}{\paperHeight}
+\setlength{\TPboxrulesize}{0 pt}
+%puts a graphic at the absolute position described by the grid
+%#1 x, #2 y, #3 width, #4 height, #5 graphic
+\newcommand\putpic[5]{%
+	\noindent
+	\begin{textblock}{#3}(#1,#2)
+		\noindent
+		\includegraphics[width=#3\TPHorizModule,height=#4\TPVertModule]{#5}
+	\end{textblock}
+}
+%
+%
+%
+\DeclareTruetypeFont{pamplona}{pamplona}
+%
+%\definecolor{decorcolor}{rgb}{0.25,0.125,0}
+\definecolor{textcolor}{rgb}{0,0,0}
+\definecolor{browncolor}{rgb}{0.125,0.0625,0}
+\definecolor{background}{rgb}{0.99,0.99,0.85}
+%
+%\definecolor{decorcolor}{rgb}{0,0,0}
+%\definecolor{textcolor}{rgb}{0,0,0}
+%
+\newcommand{\fttitle}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{pamplona}{m}{n}
+	\fontsize{14mm}{14mm}\selectfont
+	\color{textcolor}
+}
+\newcommand{\ftsubtitle}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{pamplona}{m}{n}
+	\Huge
+	\fontsize{10mm}{10mm}\selectfont
+	\color{textcolor}
+}
+\newcommand{\ftnormal}{
+	\renewcommand{\baselinestretch}{1.2}
+	\inputencoding{utf8}
+	\usefont{T1}{pnc}{m}{it}
+	\normalsize
+	\large
+%	\renewcommand{\baselinestretch}{1.5}
+%	\inputencoding{utf8}
+%	\usefont{T1}{pnc}{m}{it}
+%	\normalsize
+	\color{textcolor}
+}
+\newcommand{\ftsmall}{
+	\renewcommand{\baselinestretch}{1.2}
+	\inputencoding{utf8}
+	\usefont{T1}{pnc}{m}{it}
+	\normalsize
+%	\large
+%	\renewcommand{\baselinestretch}{1.5}
+%	\inputencoding{utf8}
+%	\usefont{T1}{pnc}{m}{it}
+%	\normalsize
+	\color{textcolor}
+}
+%
+\newcommand{\cutmarkup}[2]{
+	\noindent
+	\begin{textblock}{0}(#1,#2)
+	\noindent
+	\setlength{\unitlength}{3mm}
+	\begin{picture}(2, 2)
+		\put(-1, 2){\line(1, 0){2}} % horiz
+		\put(0, 2){\line(0, 1){1}} % vert
+%		\put(0, 2){\circle{0.1}}\put(0, 2){\circle{2}} % origo
+	\end{picture}
+	\end{textblock}
+}
+%
+\newcommand{\cutmarkdown}[2]{
+	\noindent
+	\begin{textblock}{0}(#1,#2)
+	\noindent
+	\setlength{\unitlength}{3mm}
+	\begin{picture}(2, 2)
+		\put(-1, 2){\line(1, 0){2}} % horiz
+		\put(0, 1){\line(0, 1){1}} % vert
+%		\put(0, 2){\circle{0.1}}\put(0, 2){\circle{2}} % origo
+	\end{picture}
+	\end{textblock}
+}
+%
+\newcommand{\cutmark}[2]{
+	\noindent
+	\begin{textblock}{0}(#1,#2)
+	\noindent
+	\setlength{\unitlength}{3mm}
+	\begin{picture}(2, 2)
+		\put(-1, 2){\line(1, 0){2}} % horiz
+		\put(0, 1){\line(0, 1){2}} % vert
+%		\put(0, 2){\circle{0.1}}\put(0, 2){\circle{2}} % origo
+	\end{picture}
+	\end{textblock}
+}
+%
+\newcommand{\helper}{
+	\noindent
+%	\begin{textblock}{0}(\paperWidth,\paperHeight)
+	\begin{textblock}{0}(0,0)
+	\noindent
+	\setlength{\unitlength}{1mm}
+	\begin{picture}(\paperWidth, \paperHeight)
+		\put(\leftMargin, \topMargin){\line(1, 0){\usedPaperWidth}} % horiz
+		\put(\leftMargin, \bottomMargin){\line(1, 0){\usedPaperWidth}} % horiz
+		%
+		\var\leftMargin
+		\put(\var, \topMargin){\line(0, 1){\usedPaperHeight}} % horiz
+		\advance\var\columnWidth
+		\put(\var, \topMargin){\line(0, 1){\usedPaperHeight}} % horiz
+		\advance\var\columnWidth
+		\put(\var, \topMargin){\line(0, 1){\usedPaperHeight}} % horiz
+		\advance\var\columnWidth
+		\put(\var, \topMargin){\line(0, 1){\usedPaperHeight}} % horiz
+	\end{picture}
+	\end{textblock}
+}
+%
+%
+%
+\newcount{\var}
+%
+\begin{document}
+\pagestyle{empty}
+%\pagecolor{background}
+%\helper
+%
+%
+%
+\var\leftMargin
+\cutmarkup{\var}{\topMargin}
+\cutmarkdown{\var}{\bottomMargin}
+\begin{textblock}{\columnWidth}(\var,\topMargin)
+	\noindent
+	\begin{center}
+	\begin{minipage}[t]{\columnTextWidth mm}
+	\color{textcolor}
+	%
+	\vspace{15mm}
+	\begin{center}\fttitle{Lakodalmas menü / Dishes}\end{center}
+	\vspace{10mm}
+	%
+	\ftsubtitle{Vacsora}
+	\begin{list}{}{\ftnormal\parsep0pt\itemsep0pt}
+	\item Tanyasi tyúkhúsleves
+	\item Levesben főtt zsenge tyúkhús
+		\begin{list}{}{\ftsmall\parsep0pt\itemsep0pt}
+		\item paradicsom és fokhagymamártással
+		\end{list}
+	\item Marhapörkölt galuskával
+		\begin{list}{}{\ftsmall\parsep0pt\itemsep0pt}
+		\item (svédasztalon)
+		\end{list}
+	\item Lakodalmas tál
+		\begin{list}{}{\ftnormal\parsep0pt\itemsep0pt}
+		\item Borzas pulykamell rántva
+		\item Fokhagymás tarjapecsenye
+		\item Fűszeres töltött csirkecomb
+		\item Rántott gomba és karfiol
+		\item
+		\item Petrezselymes burgonya
+		\item Rizi--bizi
+		\item Mandulás krokett
+		\item
+		\item Vegyes saláta 
+		\end{list}
+	\item Sütemények
+	\end{list}
+	%
+	\vspace{5mm}
+	\ftsubtitle{Éjféli vacsora}
+	\begin{list}{}{\ftnormal\parsep0pt\itemsep0pt}
+	\item Kolozsvári töltött káposzta
+	\item Hideg sültek franciasalátával
+	\end{list}
+	%
+	\end{minipage}
+	\end{center}
+\end{textblock}
+%
+%
+%
+\advance\var\columnWidth
+\cutmarkup{\var}{\topMargin}
+\cutmarkdown{\var}{\bottomMargin}
+\begin{textblock}{\columnWidth}(\var,\topMargin)
+	\noindent
+	\begin{center}
+	\begin{minipage}[t]{\columnTextWidth mm}
+	\color{textcolor}
+	%
+	\vspace{15mm}
+	\begin{center}\fttitle{Itallap / Drinks}\end{center}
+	\vspace{5mm}
+	%
+	\ftsubtitle{Üdítő}
+		\begin{list}{}{\ftnormal\parsep0pt\itemsep0pt}
+		\item Gyümölcslevek: almalé, narancslé
+		\item Szénsavas Cola, Fanta, Tonic
+		\item Ásványvíz (mentes és szénsavas)
+		\end{list}
+	\ftsubtitle{Alkoholos italok}
+		\begin{list}{}{\ftnormal\parsep0pt\itemsep0pt}
+		\item Sör
+			\begin{list}{}{\ftsmall\parsep0pt\itemsep0pt}
+			\item Gösser világos és barna sör
+			\item Gösser alkoholmentes sör
+%			\item Edelweiss búzasör
+			\end{list}
+		\item Bor (Hetényi Pincészet)
+			\begin{list}{}{\ftsmall\parsep0pt\itemsep0pt}
+			\item Vörös Cuvée száraz
+			\item Kékfrankos Rosé száraz
+			\item Chardonnay száraz
+			\item Édes vörös (svédasztalon)
+			\end{list}
+		\item Röviditalok
+			\begin{list}{}{\ftsmall\parsep0pt\itemsep0pt}
+			\item Jägermeister
+			\item Kecskeméti barackpálinka
+			\item Martini Bianco
+			\item Johnny Walker Whisky
+			\item Caroline's krémlikőr
+			\end{list}
+		\end{list}
+	\ftsubtitle{Kávék}
+		\begin{list}{}{\ftnormal\parsep0pt\itemsep0pt}
+		\item Hosszúkávé
+		\item Tejszínhabos kávé
+		\end{list}
+	%
+	\end{minipage}
+	\end{center}
+\end{textblock}
+%
+%
+%
+\advance\var\columnWidth
+\cutmarkup{\var}{\topMargin}
+\cutmarkdown{\var}{\bottomMargin}
+\begin{textblock}{\columnWidth}(\var,\topMargin)
+	\noindent
+	\begin{center}
+	\begin{minipage}[t]{\columnTextWidth mm}
+	\color{textcolor}
+	%
+	\vspace{15mm}
+	\begin{center}\fttitle{Dear guests, / Kedves Vendégeink!}\end{center}
+	\vspace{10mm}
+	%
+	\ftnormal
+	Welcome text / Üdvüzlő szövegelés
+	\\%
+	\vspace{20mm}\\
+	More text / További szövegelés
+	\\%
+	{\flushright Signature / Aláírás, stb \vspace{5mm}\\}
+	{\flushright \ftsubtitle Bride and Groom / Menyasszony és Vőlegény\\}
+	\end{minipage}
+	\end{center}
+\end{textblock}
+%
+\advance\var\columnWidth
+\cutmarkup{\var}{\topMargin}
+\cutmarkdown{\var}{\bottomMargin}
+%
+\cutmarkup{\rightMargin}{\topMargin}
+\cutmarkdown{\rightMargin}{\bottomMargin}
+%
+%
+%
+\end{document}
+%
+%
+%
+%\tiny
+%\scriptsize
+%\footnotesize
+%\small
+%\normalsize
+%\large
+%\Large
+%\LARGE
+%\huge
+%\Huge 

@@ -1,0 +1,333 @@
+%
+\documentclass[10pt,twoside,final]{article}
+\usepackage[dvips=false,pdftex=false,vtex=false,truedimen,portrait]{geometry}
+\geometry{
+	paperwidth=148truemm,
+	paperheight=210truemm,
+	top=0truecm,
+	bottom=0truecm,
+	left=0truecm,
+	right=0truecm,
+	nohead
+}
+\usepackage[cam,a5,center,pdftex]{crop}
+%
+%	font setting
+\usepackage[T1]{fontenc}	% font tábla
+\usepackage{ucs}
+\usepackage[utf8x,utf8]{inputenc}
+%\usepackage[utf8ttf]{inputenc}
+\usepackage{ttfucs}
+%
+%
+\usepackage[hungarian]{babel}	% division of words / elválasztások
+\selectlanguage{hungarian}	% language settings / nyelvi beállítások
+%
+%
+\usepackage{color}
+%
+%
+\usepackage{textcomp}
+\usepackage{wallpaper}
+\usepackage{rotating}
+\usepackage[absolute,showboxes]{textpos}
+%\usepackage[colorgrid,texcoord]{eso-pic}
+%
+%
+%
+%adjust the TPHorizModule and TPHorizModule units to the displayed mm %grid
+\TPGrid[0mm,0mm]{100}{100}
+\setlength{\TPboxrulesize}{0 pt}
+%puts a graphic at the absolute position described by the grid
+%#1 x, #2 y, #3 width, #4 height, #5 graphic
+\newcommand\putpic[5]{%
+	\noindent
+	\begin{textblock}{#3}(#1,#2)
+		\noindent
+		\includegraphics[width=#3\TPHorizModule,height=#4\TPVertModule]{#5}
+	\end{textblock}
+}
+%
+%
+%
+\DeclareTruetypeFont{mutlu}{mutlu}
+\DeclareTruetypeFont{extra}{extra}
+\DeclareTruetypeFont{designmotif}{designmotif}
+\DeclareTruetypeFont{decoration}{decoration}
+\DeclareTruetypeFont{ding}{ding}
+\DeclareTruetypeFont{mix}{mix}
+\DeclareTruetypeFont{floridvictorian}{floridvictorian}
+\DeclareTruetypeFont{dcorners}{dcorners}
+\DeclareTruetypeFont{ocorners}{ocorners}
+\DeclareTruetypeFont{fcalsonitc}{fcalsonitc}
+\DeclareTruetypeFont{pamplona}{pamplona}
+%
+%\definecolor{decorcolor}{rgb}{0.25,0.125,0}
+\definecolor{textcolor}{rgb}{0,0,0}
+\definecolor{browncolor}{rgb}{0.125,0.0625,0}
+\definecolor{background}{rgb}{0.99,0.99,0.85}
+%
+%\definecolor{decorcolor}{rgb}{0,0,0}
+%\definecolor{textcolor}{rgb}{0,0,0}
+%
+\newcommand{\ftocorners}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{ocorners}{m}{n}
+%	\color{black}
+}
+\newcommand{\ftcalsonitc}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{fcalsonitc}{m}{n}
+%	\color{black}
+}
+\newcommand{\ftdcorners}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{dcorners}{m}{n}
+%	\color{black}
+}
+\newcommand{\ftfloridvictorian}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{floridvictorian}{m}{n}
+%	\color{black}
+}
+\newcommand{\ftmix}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{mix}{m}{n}
+%	\color{black}
+}
+\newcommand{\ftding}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{ding}{m}{n}
+%	\color{black}
+}
+\newcommand{\ftdecoration}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{decoration}{m}{n}
+%	\color{black}
+}
+\newcommand{\ftdesignmotif}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8}
+	\usefont{T1}{designmotif}{m}{n}
+%	\color{black}
+}
+\newcommand{\fttitle}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{pamplona}{m}{n}
+	\fontsize{18mm}{24mm}\selectfont
+	\color{textcolor}
+}
+\newcommand{\ftname}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{pamplona}{m}{n}
+	\Huge
+	\fontsize{12mm}{15mm}\selectfont
+	\color{textcolor}
+%	\color{gold}
+}
+\newcommand{\ftsubname}{
+	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8}
+	\usefont{T1}{pnc}{m}{it}
+	\footnotesize
+	\scriptsize
+	\normalsize
+	\color{textcolor}
+}
+\newcommand{\ftnormal}{
+	\renewcommand{\baselinestretch}{1.5}
+	\inputencoding{utf8}
+	\usefont{T1}{pnc}{m}{it}
+	\normalsize
+%	\large
+%	\renewcommand{\baselinestretch}{1.5}
+%	\inputencoding{utf8}
+%	\usefont{T1}{pnc}{m}{it}
+%	\normalsize
+	\color{textcolor}
+}
+\newcommand{\ftquote}{
+	\renewcommand{\baselinestretch}{1.5}
+	\inputencoding{utf8}
+	\usefont{T1}{pnc}{m}{it}
+	\normalsize
+	\small
+%	\renewcommand{\baselinestretch}{1}
+%	\inputencoding{utf8}
+%	\usefont{T1}{pnc}{m}{it}
+%	\footnotesize
+	\color{textcolor}
+}
+%\fontfamily{#1}\fontseries{#2}\fontshape{#3}\selectfont
+%	fontfamily				fontseries	fontshape
+%	Courier (pcr)				m		n
+%	Times New Roman (ptm)			b		it
+%	Helvetica (phv)				bx		sl
+%	Computer Modern Roman (cmr)		sbc		sc
+%	Computer Modern SansSerif (cmss)			bc
+%	Computer Modern Typewriter (cmtt)
+%	Computer Modern Fibonacci (cmfib)
+%	Computer Modern Dunhill (cmdh)
+%	Bookman (pbk)
+%	New Century Schoolbook (pnc)
+%	Palatino (ppl)
+%	AvantGarde (pag)
+%
+%
+\newcommand{\cutmark}[2]{
+	\begin{textblock}{1}(#1,#2)
+		\noindent
+		\color{black}
+		\fontsize{2mm}{2mm}\selectfont
+		\rm .
+%		\ftdecoration
+%		\scalebox{1}[1]{a}
+	\end{textblock}
+}
+%
+\begin{document}
+\pagestyle{empty}
+\pagecolor{background}
+%
+%
+%
+\begin{textblock}{60}(20,7)
+	\ftquote
+	\flushleft\noindent
+	\color{textcolor}
+	``Touching quotation\\
+	Megindító idézet''
+	\vspace{-2ex}\flushright%
+	(Author) / (Szerző)
+%	\noindent\normalsize\pamplona árvíztűrőtükörfúrógép
+%	\noindent\small\itt árvíztűrőtükörfúrógép
+\end{textblock}
+%
+%
+%
+%\begin{textblock}{100}(0,-5)
+%	\flushright\noindent
+%	\color{decorcolor}
+%	\fontsize{40mm}{40mm}\selectfont
+%	\begin{rotate}{-90}
+%	\ftmix
+%	\scalebox{1}[-1]{y}
+%	\end{rotate}
+%\end{textblock}
+%\begin{textblock}{75}(0,-3)
+%	\flushright\noindent
+%	\color{decorcolor}
+%	\fontsize{40mm}{40mm}\selectfont
+%	\begin{rotate}{-90}
+%	\ftmix
+%	\scalebox{1.5}[1.2]{w}
+%	\end{rotate}
+%\end{textblock}
+%\begin{textblock}{100}(11,0)
+%	\flushright\noindent
+%	\color{decorcolor}
+%	\fontsize{40mm}{40mm}\selectfont
+%	\ftmix
+%	\scalebox{-2}[2]{z}
+%\end{textblock}
+\begin{textblock}{100}(0,0)
+	\flushright\noindent
+%	\color{decorcolor}
+	\fontsize{40mm}{40mm}\selectfont
+%	\ftocorners 
+%	\scalebox{1}[1]{j}
+%	\ftfloridvictorian
+%	\scalebox{1}[1]{y}
+\end{textblock}
+%
+%
+%
+%\putpic{75}{0.5}{20}{17.5}{weddingchildren.png}
+%\putpic{74}{1}{25}{25}{wedding.png}
+%
+%
+%
+\begin{textblock}{72}(14,20)
+	\noindent
+	\begin{center}
+		\noindent
+		\ftnormal
+	\color{textcolor}
+		Let you know, / Örömmel értesítünk, hogy\\
+		\ftname
+	\color{textcolor}
+		Named Bride / Menyasszony neve\\
+		\ftsubname
+	\color{textcolor}
+		as fiance'e, / mint menyasszony,\\
+		\ftnormal
+	\color{textcolor}
+		and / és\\
+		\ftname
+		Named Groom / Vőlegény neve\\
+		\ftsubname
+		as groom / mint vőlegény\\
+		\noindent
+		\ftnormal
+		\\
+%		\\[1.7ex]
+	\color{textcolor}
+		invite you to their marrige ceremony. /
+		meghívunk esküvőnkre.
+	\end{center}
+\end{textblock}
+%
+%
+%
+\putpic{0.5}{63}{40}{35}{BrideAndGroom_22245.jpg}
+%
+%
+%
+\begin{textblock}{80}(10,63)
+	\flushright\noindent
+	\ftnormal
+	\color{textcolor}
+	Further information and invitation to\\
+	dinner and party, dance etc\\
+	További információk és meghívás a\\
+	lakodalomra és mulatságra.
+\end{textblock}
+%
+%
+%
+%\cutmark{-0.4}{0.1}
+%\cutmark{99.9}{0.1}
+%
+%\cutmark{-0.2}{19}
+%\cutmark{99.7}{19}
+%\cutmark{-0.2}{62}
+%\cutmark{99.7}{62}
+%
+%\cutmark{-0.4}{99.8}
+%\cutmark{99.9}{99.8}
+%
+%
+%
+\end{document}
+%
+%
+%
+%\tiny
+%\scriptsize
+%\footnotesize
+%\small
+%\normalsize
+%\large
+%\Large
+%\LARGE
+%\huge
+%\Huge 

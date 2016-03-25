@@ -1,0 +1,23 @@
+\ProvidesFile{t1knight.fd}[Knight font]
+
+\DeclareFontFamily{T1}{knight}{}
+
+\DeclareFontShape{T1}{knight}{m}{n}{<-> knight}{}
+%\DeclareFontShape{T1}{knight}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{knight}{m}{it}{<->ssub * knight/m/n}{}
+\DeclareFontShape{T1}{knight}{m}{sl}{<->ssub * knight/m/n}{}
+\DeclareFontShape{T1}{knight}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{knight}{b}{n}{<->ssub * knight/m/n}{}
+\DeclareFontShape{T1}{knight}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{knight}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{knight}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{knight}{bx}{n}{<->ssub * knight/m/n}{}
+\DeclareFontShape{T1}{knight}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{knight}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{knight}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+knight\space <knight.ttf\space <T1-WGL4.enc}
+
+\endinput

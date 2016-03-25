@@ -1,0 +1,23 @@
+\ProvidesFile{t1mix.fd}[Mutlu font]
+
+\DeclareFontFamily{T1}{mix}{}
+
+\DeclareFontShape{T1}{mix}{m}{n}{<-> mix}{}
+%\DeclareFontShape{T1}{mix}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{mix}{m}{it}{<->ssub * mix/m/n}{}
+\DeclareFontShape{T1}{mix}{m}{sl}{<->ssub * mix/m/n}{}
+\DeclareFontShape{T1}{mix}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{mix}{b}{n}{<->ssub * mix/m/n}{}
+\DeclareFontShape{T1}{mix}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{mix}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{mix}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{mix}{bx}{n}{<->ssub * mix/m/n}{}
+\DeclareFontShape{T1}{mix}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{mix}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{mix}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+mix\space <mix.ttf\space <T1-WGL4.enc}
+
+\endinput

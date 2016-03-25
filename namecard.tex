@@ -1,0 +1,291 @@
+%
+\documentclass[10pt,twoside,final]{article}
+\usepackage[dvips=false,pdftex=false,vtex=false,truedimen,portrait]{geometry}
+\geometry{
+	paperwidth=320truemm,
+	paperheight=450truemm,
+%	paperwidth=210truemm,
+%	paperheight=297truemm,
+	top=10truemm,
+	bottom=10truemm,
+	left=10truemm,
+	right=10truemm,
+	nohead
+}
+%\usepackage[cam,a4,center,pdftex]{crop}
+%
+%	font setting
+\usepackage[T1]{fontenc}
+\usepackage{ucs}
+\usepackage[utf8x,utf8]{inputenc}
+%\usepackage[utf8ttf]{inputenc}
+\usepackage{ttfucs}
+%
+%
+\usepackage[hungarian]{babel}	% division of words / elválasztások
+\selectlanguage{hungarian}	% language settings / nyelvi beállítások
+%
+%
+\usepackage{color}
+%
+%
+\usepackage{textcomp}
+\usepackage{wallpaper}
+\usepackage{rotating}
+\usepackage[absolute,showboxes]{textpos}
+\usepackage{bigcircle}
+\usepackage{ifthen}
+%\usepackage[colorgrid,texcoord]{eso-pic}
+%
+%
+%
+\newcount{\paperWidth}\paperWidth\paperwidth%
+\divide\paperWidth186467%
+\newcount{\paperHeight}\paperHeight\paperheight%
+\divide\paperHeight186467%
+\newcount{\usedPaperWidth}\usedPaperWidth\paperWidth%
+\advance\usedPaperWidth-10
+\newcount{\usedPaperHeight}\usedPaperHeight\paperHeight%
+\advance\usedPaperHeight-10
+%
+%adjust the TPHorizModule and TPHorizModule units to the displayed mm %grid
+\TPGrid{\paperWidth}{\paperHeight}
+\setlength{\TPboxrulesize}{0 pt}
+%
+\definecolor{textcolor}{rgb}{0,0,0}
+\definecolor{transparent}{rgb}{0,0,0}
+%
+\DeclareTruetypeFont{pamplona}{pamplona}
+%
+\newcommand{\ftnick}{
+%	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{pamplona}{m}{n}
+%	\Huge
+	\fontsize{15mm}{15mm}\selectfont
+	\color{textcolor}
+%	\color{gold}
+}
+\newcommand{\ftsinglename}{
+%	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{pamplona}{m}{n}
+%	\Huge
+	\fontsize{12mm}{12mm}\selectfont
+	\color{textcolor}
+%	\color{gold}
+}
+\newcommand{\ftname}{
+%	\renewcommand{\baselinestretch}{1}
+	\inputencoding{utf8x}
+	\usefont{T1}{pamplona}{m}{n}
+%	\Huge
+	\fontsize{10mm}{10mm}\selectfont
+	\color{textcolor}
+%	\color{gold}
+}
+%
+\newcommand{\ftnormal}{
+%	\renewcommand{\baselinestretch}{1.5}
+	\inputencoding{utf8}
+	\usefont{T1}{pnc}{m}{it}
+%	\normalsize
+	\large
+	\color{textcolor}
+}
+%
+\newcommand{\helper}[2]{
+	\noindent
+	\begin{textblock}{0}(#1,#2)
+	\noindent
+	\setlength{\unitlength}{1mm}
+	\begin{picture}(90, 50)
+		\put(30, 25){\line(1, 0){30}} % horiz
+		\put(45, 15){\line(0, 1){20}} % vert
+		\put(45, 25){\circle{1}}\put(45, 25){\circle{20}} % origo
+		\bigcircle{45}{25}{45}
+		\bigcircle{45}{25}{25}
+		% frame
+		\put(0, 0){\line(1, 0){90}} % horiz
+		\put(0, 50){\line(1, 0){90}} % horiz
+		\put(0, 0){\line(0, 1){50}} % vert
+		\put(90, 0){\line(0, 1){50}} % vert
+		% BL 2cm
+		\put(0, 20){\line(1, 0){20}} % horiz
+		\put(0, 0){\line(1, 0){20}} % horiz
+		\put(20, 0){\line(0, 1){20}} % vert
+		\put(0, 0){\line(0, 1){20}} % vert
+		% BR 2cm
+		\put(90, 20){\line(-1, 0){20}} % horiz
+		\put(90, 0){\line(-1, 0){20}} % horiz
+		\put(70, 0){\line(0, 1){20}} % vert
+		\put(90, 0){\line(0, 1){20}} % vert
+		% BR 1cm
+		\put(90, 10){\line(-1, 0){10}} % horiz
+		\put(90, 0){\line(-1, 0){10}} % horiz
+		\put(80, 0){\line(0, 1){10}} % vert
+		\put(90, 0){\line(0, 1){10}} % vert
+		% TL 2cm
+		\put(0, 50){\line(1, 0){20}} % horiz
+		\put(0, 30){\line(1, 0){20}} % horiz
+		\put(20, 30){\line(0, 1){20}} % vert
+		\put(0, 30){\line(0, 1){20}} % vert
+		% TL 1cm
+		\put(0, 50){\line(1, 0){10}} % horiz
+		\put(0, 40){\line(1, 0){10}} % horiz
+		\put(10, 40){\line(0, 1){10}} % vert
+		\put(0, 40){\line(0, 1){10}} % vert
+		% TR 2cm
+		\put(90, 50){\line(-1, 0){20}} % horiz
+		\put(90, 30){\line(-1, 0){20}} % horiz
+		\put(90, 50){\line(0, -1){20}} % vert
+		\put(70, 50){\line(0, -1){20}} % vert
+		% TR 1cm
+		\put(90, 50){\line(-1, 0){10}} % horiz
+		\put(90, 40){\line(-1, 0){10}} % horiz
+		\put(90, 50){\line(0, -1){10}} % vert
+		\put(80, 50){\line(0, -1){10}} % vert
+%		\put(0, 50){\circle{0.1}}\put(0, 50){\circle{2}} % origo
+	\end{picture}
+	\end{textblock}
+}
+%
+\newcommand{\cutmark}[2]{
+	\noindent
+	\begin{textblock}{0}(#1,#2)
+	\noindent
+	\setlength{\unitlength}{3mm}
+	\begin{picture}(2, 2)
+		\put(-1, 2){\line(1, 0){2}} % horiz
+		\put(0, 1){\line(0, 1){2}} % vert
+%		\put(0, 2){\circle{0.1}}\put(0, 2){\circle{2}} % origo
+	\end{picture}
+	\end{textblock}
+}
+%
+\newcount{\hposR}%
+\newcount{\vposB}%
+\newcount{\hposC}%
+\newcount{\vposC}%
+\newcommand\namecard[5]{%
+	\noindent
+	\ftnick%
+	\begin{textblock}{90}(#1,#2)
+%	\vspace{3mm}\ \\%
+%	\hspace*{8mm}\hspace*{\stretch{1}}#3\hspace*{\stretch{2}}\hspace*{20mm}\\%
+%	\hspace*{0mm}\hspace*{\stretch{1}}#4\hspace*{\stretch{1}}\\%
+%	{\Huge\hspace*{20mm}\hspace*{\stretch{1}}#5\hspace*{\stretch{1}}\hspace*{8mm}}%
+	\ifthenelse{\equal{#5}{}}%
+	{%
+		\ifthenelse{\equal{#4}{}}%
+		{
+			% 1 soros név
+			\vspace{12mm}\ \\%
+			%\hspace*{15mm}\hspace*{\stretch{1}}#5\hspace*{\stretch{2}}\hspace*{20mm}\\[4mm]%
+			{\ftsinglename%\HUGE%
+				\hspace*{10mm}\hspace*{\stretch{1}}#3\hspace*{\stretch{1}}\hspace*{10mm}%
+			}%
+		}{
+			% 2 soros név
+			\vspace{7mm}\ \\%
+			%\hspace*{15mm}\hspace*{\stretch{1}}#5\hspace*{\stretch{2}}\hspace*{20mm}\\[4mm]%
+			{\ftsinglename%\HUGE%
+				\hspace*{10mm}\hspace*{\stretch{1}}#3\hspace*{\stretch{1}}\hspace*{10mm}\\[-5mm]%
+				\hspace*{10mm}\hspace*{\stretch{1}}#4\hspace*{\stretch{1}}\hspace*{10mm}%
+			}%
+%			{\ftname%\ftnormal\LARGE%
+%				\hspace*{25mm}\hspace*{\stretch{1}}#3\hspace*{\stretch{1}}\hspace*{10mm}\\[-5mm]%
+%				\hspace*{25mm}\hspace*{\stretch{1}}#4\hspace*{\stretch{1}}\hspace*{10mm}%
+%			}%
+		}
+	}{%
+		\ifthenelse{\equal{#4}{}}%
+		{
+			% becenév + 1 soros név
+			\vspace{4mm}\ \\%
+			\hspace*{15mm}\hspace*{\stretch{1}}#5\hspace*{\stretch{2}}\hspace*{20mm}\\[4mm]%
+			{\ftname%\ftnormal\LARGE%
+				\hspace*{20mm}\hspace*{\stretch{1}}#3\hspace*{\stretch{1}}\hspace*{4mm}%
+			}%
+		}{
+			% becenév + 2 soros név
+			\vspace{3mm}\ \\%
+			\hspace*{15mm}\hspace*{\stretch{1}}#5\hspace*{\stretch{2}}\hspace*{20mm}\\%
+			{\ftname%\ftnormal\LARGE%
+				\hspace*{25mm}\hspace*{\stretch{1}}#3\hspace*{\stretch{1}}\hspace*{10mm}\\[-5mm]%
+				\hspace*{25mm}\hspace*{\stretch{1}}#4\hspace*{\stretch{1}}\hspace*{10mm}%
+			}%
+		}
+	}%
+	\end{textblock}%
+	\hposR#1\advance\hposR90%
+	\vposB#2\advance\vposB50%
+	\hposC#1\advance\hposC45%
+	\vposC#2\advance\vposC25%
+	\cutmark{#1}{#2}%
+	\cutmark{\hposR}{#2}%
+	\cutmark{#1}{\vposB}%
+	\cutmark{\hposR}{\vposB}%
+	%
+%	\helper{#1}{#2}
+}
+%
+\newcount{\namecardvertpos}\namecardvertpos10%
+\newcount{\namecardhorpos}\namecardhorpos10%
+\newcount{\namecardlines}\namecardlines\usedPaperHeight%
+\divide\namecardlines50%
+\newcount{\namecardrows}\namecardrows\usedPaperWidth%
+\divide\namecardrows90%
+\newcount{\namecardline}\namecardline1%
+\newcount{\namecardrow}\namecardrow1%
+%
+\newcommand\namecardAuto[3]{%
+	\namecard{\namecardhorpos}{\namecardvertpos}{#1}{#2}{#3}
+%	\the\namecardline\ \the\namecardrow
+	\ifthenelse{%
+		\namecardrow < \namecardrows%
+	}{%
+		\advance\namecardhorpos90%
+		\advance\namecardrow1
+	}{%
+		\namecardhorpos10%
+		\namecardrow1
+		\ifthenelse{%
+			\namecardline < \namecardlines%
+		}{%
+			\advance\namecardvertpos50%
+			\advance\namecardline1
+		}{%
+			\namecardvertpos10%
+			\namecardline1
+			\pagebreak
+		}
+	}
+}
+%
+%
+%
+%
+%
+\begin{document}
+\pagestyle{empty}
+%
+%
+\namecardAuto{Bride, Menyasszony}		{nick/becenév}		{Name / Név}
+\namecardAuto{Groom, Vőlegény}			{nick/becenév}		{Name / Név}
+%
+%
+\end{document}
+%
+%
+%
+%\tiny
+%\scriptsize
+%\footnotesize
+%\small
+%\normalsize
+%\large
+%\Large
+%\LARGE
+%\huge
+%\Huge 

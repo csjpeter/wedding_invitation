@@ -1,0 +1,23 @@
+\ProvidesFile{t1pamplona.fd}[Pamplona font]
+
+\DeclareFontFamily{T1}{pamplona}{}
+
+\DeclareFontShape{T1}{pamplona}{m}{n}{<-> pamplona}{}
+%\DeclareFontShape{T1}{pamplona}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{pamplona}{m}{it}{<->ssub * pamplona/m/n}{}
+\DeclareFontShape{T1}{pamplona}{m}{sl}{<->ssub * pamplona/m/n}{}
+\DeclareFontShape{T1}{pamplona}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{pamplona}{b}{n}{<->ssub * pamplona/m/n}{}
+\DeclareFontShape{T1}{pamplona}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{pamplona}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{pamplona}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{pamplona}{bx}{n}{<->ssub * pamplona/m/n}{}
+\DeclareFontShape{T1}{pamplona}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{pamplona}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{pamplona}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+pamplona\space <pamplona.ttf\space <T1-WGL4.enc}
+
+\endinput

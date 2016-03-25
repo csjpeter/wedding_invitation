@@ -1,0 +1,23 @@
+\ProvidesFile{t1mutlu.fd}[Mutlu font]
+
+\DeclareFontFamily{T1}{mutlu}{}
+
+\DeclareFontShape{T1}{mutlu}{m}{n}{<-> mutlu}{}
+%\DeclareFontShape{T1}{mutlu}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{mutlu}{m}{it}{<->ssub * mutlu/m/n}{}
+\DeclareFontShape{T1}{mutlu}{m}{sl}{<->ssub * mutlu/m/n}{}
+\DeclareFontShape{T1}{mutlu}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{mutlu}{b}{n}{<->ssub * mutlu/m/n}{}
+\DeclareFontShape{T1}{mutlu}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{mutlu}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{mutlu}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{mutlu}{bx}{n}{<->ssub * mutlu/m/n}{}
+\DeclareFontShape{T1}{mutlu}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{mutlu}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{mutlu}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+mutlu\space <mutlu.ttf\space <T1-WGL4.enc}
+
+\endinput

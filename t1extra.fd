@@ -1,0 +1,23 @@
+\ProvidesFile{t1extra.fd}[Mutlu font]
+
+\DeclareFontFamily{T1}{extra}{}
+
+\DeclareFontShape{T1}{extra}{m}{n}{<-> extra}{}
+%\DeclareFontShape{T1}{extra}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{extra}{m}{it}{<->ssub * extra/m/n}{}
+\DeclareFontShape{T1}{extra}{m}{sl}{<->ssub * extra/m/n}{}
+\DeclareFontShape{T1}{extra}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{extra}{b}{n}{<->ssub * extra/m/n}{}
+\DeclareFontShape{T1}{extra}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{extra}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{extra}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{extra}{bx}{n}{<->ssub * extra/m/n}{}
+\DeclareFontShape{T1}{extra}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{extra}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{extra}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+extra\space <extra.ttf\space <T1-WGL4.enc}
+
+\endinput

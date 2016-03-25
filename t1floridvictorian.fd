@@ -1,0 +1,23 @@
+\ProvidesFile{t1floridvictorian.fd}[Mutlu font]
+
+\DeclareFontFamily{T1}{floridvictorian}{}
+
+\DeclareFontShape{T1}{floridvictorian}{m}{n}{<-> floridvictorian}{}
+%\DeclareFontShape{T1}{floridvictorian}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{floridvictorian}{m}{it}{<->ssub * floridvictorian/m/n}{}
+\DeclareFontShape{T1}{floridvictorian}{m}{sl}{<->ssub * floridvictorian/m/n}{}
+\DeclareFontShape{T1}{floridvictorian}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{floridvictorian}{b}{n}{<->ssub * floridvictorian/m/n}{}
+\DeclareFontShape{T1}{floridvictorian}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{floridvictorian}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{floridvictorian}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{floridvictorian}{bx}{n}{<->ssub * floridvictorian/m/n}{}
+\DeclareFontShape{T1}{floridvictorian}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{floridvictorian}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{floridvictorian}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+floridvictorian\space <floridvictorian.ttf\space <T1-WGL4.enc}
+
+\endinput

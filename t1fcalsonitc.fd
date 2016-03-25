@@ -1,0 +1,23 @@
+\ProvidesFile{t1fcalsonitc.fd}[Mutlu font]
+
+\DeclareFontFamily{T1}{fcalsonitc}{}
+
+\DeclareFontShape{T1}{fcalsonitc}{m}{n}{<-> fcalsonitc}{}
+%\DeclareFontShape{T1}{fcalsonitc}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{fcalsonitc}{m}{it}{<->ssub * fcalsonitc/m/n}{}
+\DeclareFontShape{T1}{fcalsonitc}{m}{sl}{<->ssub * fcalsonitc/m/n}{}
+\DeclareFontShape{T1}{fcalsonitc}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{fcalsonitc}{b}{n}{<->ssub * fcalsonitc/m/n}{}
+\DeclareFontShape{T1}{fcalsonitc}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{fcalsonitc}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{fcalsonitc}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{fcalsonitc}{bx}{n}{<->ssub * fcalsonitc/m/n}{}
+\DeclareFontShape{T1}{fcalsonitc}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{fcalsonitc}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{fcalsonitc}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+fcalsonitc\space <fcalsonitc.ttf\space <T1-WGL4.enc}
+
+\endinput

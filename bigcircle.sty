@@ -1,0 +1,28 @@
+% Steve's macro for drawing big circles
+%
+% Works in picture or math modes
+
+\usepackage{fltpoint}       % used to do arithmetic within LaTeX code.
+\usepackage{bez123}         % used to draw more compolicated bezier curves
+\fpDecimalSign{.}
+
+% bigcircle parameters are x,y,r.  They must be entered as decimals.
+% ex: Enter 5 as 5.0, .3 as 0.3, etc.
+\newcounter{bck}
+\newcounter{bcx} \newcounter{bcy}
+\newcounter{bcxmr} \newcounter{bcxpr}
+\newcounter{bcymr} \newcounter{bcypr}
+\newcounter{bcxmk} \newcounter{bcxpk}
+\newcounter{bcymk} \newcounter{bcypk}
+\newcommand{\bigcircle}[3]{ \fpMul{\bck}{0.5522847498}{#3}
+	\fpSub{\bcxmr}{#1}{#3} \fpAdd{\bcxpr}{#1}{#3}
+	\fpSub{\bcymr}{#2}{#3} \fpAdd{\bcypr}{#2}{#3}
+	\fpSub{\bcxmk}{#1}{\bck} \fpAdd{\bcxpk}{#1}{\bck}
+	\fpSub{\bcymk}{#2}{\bck} \fpAdd{\bcypk}{#2}{\bck}
+	\fpAdd{\bcx}{#1}{0.0} \fpAdd{\bcy}{#2}{0.0}
+	\cbezier(\bcxmr,\bcy)(\bcxmr,\bcypk)(\bcxmk,\bcypr)(\bcx,\bcypr)
+		\cbezier(\bcx,\bcypr)(\bcxpk,\bcypr)(\bcxpr,\bcypk)(\bcxpr,\bcy)
+		\cbezier(\bcxpr,\bcy)(\bcxpr,\bcymk)(\bcxpk,\bcymr)(\bcx,\bcymr)
+		\cbezier(\bcx,\bcymr)(\bcxmk,\bcymr)(\bcxmr,\bcymk)(\bcxmr,\bcy) }
+		% *********  End graphics macros  *********
+

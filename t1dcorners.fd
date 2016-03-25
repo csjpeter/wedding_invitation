@@ -1,0 +1,23 @@
+\ProvidesFile{t1dcorners.fd}[Mutlu font]
+
+\DeclareFontFamily{T1}{dcorners}{}
+
+\DeclareFontShape{T1}{dcorners}{m}{n}{<-> dcorners}{}
+%\DeclareFontShape{T1}{dcorners}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{dcorners}{m}{it}{<->ssub * dcorners/m/n}{}
+\DeclareFontShape{T1}{dcorners}{m}{sl}{<->ssub * dcorners/m/n}{}
+\DeclareFontShape{T1}{dcorners}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{dcorners}{b}{n}{<->ssub * dcorners/m/n}{}
+\DeclareFontShape{T1}{dcorners}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{dcorners}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{dcorners}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{dcorners}{bx}{n}{<->ssub * dcorners/m/n}{}
+\DeclareFontShape{T1}{dcorners}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{dcorners}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{dcorners}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+dcorners\space <dcorners.ttf\space <T1-WGL4.enc}
+
+\endinput

@@ -1,0 +1,23 @@
+\ProvidesFile{t1handscriptsf.fd}[Handscriptsf font]
+
+\DeclareFontFamily{T1}{handscriptsf}{}
+
+\DeclareFontShape{T1}{handscriptsf}{m}{n}{<-> handscriptsf}{}
+%\DeclareFontShape{T1}{handscriptsf}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{handscriptsf}{m}{it}{<->ssub * handscriptsf/m/n}{}
+\DeclareFontShape{T1}{handscriptsf}{m}{sl}{<->ssub * handscriptsf/m/n}{}
+\DeclareFontShape{T1}{handscriptsf}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{handscriptsf}{b}{n}{<->ssub * handscriptsf/m/n}{}
+\DeclareFontShape{T1}{handscriptsf}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{handscriptsf}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{handscriptsf}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{handscriptsf}{bx}{n}{<->ssub * handscriptsf/m/n}{}
+\DeclareFontShape{T1}{handscriptsf}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{handscriptsf}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{handscriptsf}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+handscriptsf\space <handscriptsf.ttf\space <T1-WGL4.enc}
+
+\endinput

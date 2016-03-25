@@ -1,0 +1,54 @@
+%
+\documentclass[10pt,twoside,final]{article}
+\usepackage[dvips=false,pdftex=false,vtex=false,truedimen,portrait]{geometry}
+\geometry{
+	paperwidth=297truemm,
+	paperheight=210truemm,
+	top=5truecm,
+	bottom=5truecm,
+	left=5truecm,
+	right=5truecm,
+	nohead
+}
+%
+%	font setting
+\usepackage[T1]{fontenc}
+\usepackage[hungarian]{babel}	% division of words / elválasztások
+\selectlanguage{hungarian}	% language settings / nyelvi beállítások
+%
+\usepackage{textcomp}
+\usepackage{wallpaper}
+\usepackage[absolute,showboxes]{textpos}
+%\usepackage[colorgrid,texcoord]{eso-pic}
+%
+%
+%
+%adjust the TPHorizModule and TPHorizModule units to the displayed mm %grid
+\TPGrid[0mm,0mm]{100}{100}
+\setlength{\TPboxrulesize}{0 pt}
+%puts a graphic at the absolute position described by the grid
+%#1 x, #2 y, #3 width, #4 height, #5 graphic
+\newcommand\putpic[5]{%
+	\noindent
+	\begin{textblock}{#3}(#1,#2)
+		\noindent
+		\includegraphics[width=#3\TPHorizModule,height=#4\TPVertModule]{#5}
+	\end{textblock}
+}
+%
+%
+\begin{document}
+\pagestyle{empty}
+%
+\putpic{2}{2}{48}{96}{meghivo_lagzi.pdf}
+\putpic{50.2}{2}{48}{96}{meghivo_lagzi.pdf}
+%\putpic{2}{2}{48}{96}{meghivo.pdf}
+%\putpic{50.2}{2}{48}{96}{meghivo.pdf}
+%
+\null\newpage
+%
+\putpic{2}{2}{48}{96}{meghivoback.pdf}
+\putpic{50.2}{2}{48}{96}{meghivoback.pdf}
+%
+\end{document}
+%

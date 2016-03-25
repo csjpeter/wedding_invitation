@@ -1,0 +1,23 @@
+\ProvidesFile{t1designmotif.fd}[DesignMotif font]
+
+\DeclareFontFamily{T1}{designmotif}{}
+
+\DeclareFontShape{T1}{designmotif}{m}{n}{<-> designmotif}{}
+%\DeclareFontShape{T1}{designmotif}{m}{n}{<->ssub * ptm/m/n}{}
+\DeclareFontShape{T1}{designmotif}{m}{it}{<->ssub * designmotif/m/n}{}
+\DeclareFontShape{T1}{designmotif}{m}{sl}{<->ssub * designmotif/m/n}{}
+\DeclareFontShape{T1}{designmotif}{m}{sc}{<->ssub * ptm/m/sc}{}
+
+\DeclareFontShape{T1}{designmotif}{b}{n}{<->ssub * designmotif/m/n}{}
+\DeclareFontShape{T1}{designmotif}{b}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{designmotif}{b}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{designmotif}{b}{sc}{<->ssub * ptm/b/sc}{}
+
+\DeclareFontShape{T1}{designmotif}{bx}{n}{<->ssub * designmotif/m/n}{}
+\DeclareFontShape{T1}{designmotif}{bx}{it}{<->ssub * ptm/b/it}{}
+\DeclareFontShape{T1}{designmotif}{bx}{sl}{<->ssub * ptm/b/sl}{}
+\DeclareFontShape{T1}{designmotif}{bx}{sc}{<->ssub * ptm/b/sc}{}
+
+\pdfmapline{+designmotif\space <designmotif.ttf\space <T1-WGL4.enc}
+
+\endinput
